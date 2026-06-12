@@ -1,0 +1,204 @@
+/* ==========================================
+   1. ESTILOS GENERALES (Mobile-First)
+   ========================================== */
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header, main, footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px; /* Margen cómodo en celulares */
+}
+
+/* ==========================================
+   2. ENCABEZADO
+   ========================================== */
+header {
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 3px solid #e0e0e0;
+    padding: 30px 15px;
+}
+
+#logo {
+    width: 120px; /* Tamaño optimizado para pantallas chicas */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+header h1 {
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+header p {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   3. SECCIONES (RUBROS)
+   ========================================== */
+section {
+    background: #fff;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: #27ae60;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 5px;
+    font-size: 1.4rem;
+    margin-top: 0;
+}
+
+/* Grilla de Productos (Por defecto 1 columna en celular) */
+.grilla-productos {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.producto {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 6px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.producto h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #34495e;
+}
+
+.producto ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.producto li {
+    margin-bottom: 5px;
+}
+
+/* Galería Provisoria */
+.galeria-provisoria {
+    min-height: 50px;
+}
+
+/* ==========================================
+   4. PIE DE PÁGINA Y CONTACTO
+   ========================================== */
+footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 30px;
+}
+
+footer h3 {
+    color: #ecf0f1;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.contacto, .redes {
+    margin-bottom: 25px;
+}
+
+/* Botón de WhatsApp (Fácil de tocar con el pulgar) */
+.btn-whatsapp {
+    background-color: #25d366;
+    color: #fff !important;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ==========================================
+   5. RESPONSIVE (Pantallas Medianas y Grandes)
+   ========================================== */
+
+/* Tablets en adelante (>= 768px) */
+@media (min-width: 768px) {
+    header, main, footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        padding: 40px 20px;
+    }
+
+    #logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 30px 0;
+    }
+
+    /* La grilla se adapta automáticamente según el espacio */
+    .grilla-productos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    /* Footer en dos columnas */
+    footer {
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+        align-items: flex-start;
+        padding: 40px 20px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .contacto, .redes {
+        margin-bottom: 0;
+    }
+}
